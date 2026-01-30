@@ -7,21 +7,16 @@ Quick setup guide to get Hermes running in 5 minutes.
 - Google Chrome or Chromium-based browser
 - Anthropic API key ([Get one here](https://console.anthropic.com/))
 
-## Step 1: Generate Icons (2 minutes)
+## Step 1: Clone the Repository (1 minute)
 
-1. Open `icons/create-icons.html` in Chrome:
-   ```bash
-   open icons/create-icons.html
-   ```
+```bash
+git clone https://github.com/VanyaHuaman/hermes-extension.git
+cd hermes-extension
+```
 
-2. Click the **"Download All Icons"** button
+**Icons are already included** - the PNG files are in the `icons/` folder, ready to use!
 
-3. Three PNG files will download:
-   - `icon16.png`
-   - `icon48.png`
-   - `icon128.png`
-
-4. Move these files into the `icons/` folder (they should be in the same directory as `create-icons.html`)
+> **For Developers:** If you're modifying icon files, you can regenerate them by opening `icons/create-icons.html` in Chrome.
 
 ## Step 2: Load Extension in Chrome (1 minute)
 
@@ -38,7 +33,7 @@ Quick setup guide to get Hermes running in 5 minutes.
 
 5. Hermes should now appear in your extensions!
 
-## Step 3: Configure API Key (1 minute)
+## Step 3: Configure API Key (30 seconds)
 
 1. Click the Hermes extension icon in Chrome toolbar (⚡)
 

@@ -18,16 +18,21 @@ A Chrome extension that lets you ask questions about ANY website using AI. Index
 
 ## 🚀 Quick Start
 
-### 1. Install Icons
+### 1. Clone the Repository
 
-Open `icons/create-icons.html` in Chrome and click "Download All Icons". Move the 3 PNG files to the `icons/` folder.
+```bash
+git clone https://github.com/VanyaHuaman/hermes-extension.git
+cd hermes-extension
+```
 
-### 2. Load Extension
+**Note:** Icons are already included - no need to generate them!
+
+### 2. Load Extension in Chrome
 
 1. Go to `chrome://extensions/`
 2. Enable **Developer mode** (top-right toggle)
 3. Click **Load unpacked**
-4. Select the `hermes-extension` folder
+4. Select the `hermes-extension` folder you just cloned
 
 ### 3. Configure API Key
 
