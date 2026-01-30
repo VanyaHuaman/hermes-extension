@@ -399,7 +399,14 @@ function showToast(message, type = 'success') {
 
   document.body.appendChild(toast);
 
+  // Calculate timeout based on message length
+  // Short messages: 3 seconds
+  // Long messages (like robots.txt errors): up to 10 seconds
+  const baseTimeout = 3000;
+  const charsPerSecond = 50; // Reading speed
+  const calculatedTimeout = Math.min(10000, Math.max(baseTimeout, message.length / charsPerSecond * 1000));
+
   setTimeout(() => {
     toast.remove();
-  }, 3000);
+  }, calculatedTimeout);
 }

@@ -108,7 +108,8 @@ async function crawlSite(maxPages) {
   const settings = await storage.getSettings();
   const crawler = new HermesCrawler(
     Math.min(maxPages, settings.maxPagesPerCrawl),
-    settings.crawlDelay
+    settings.crawlDelay,
+    settings.respectRobotsTxt !== false // Default to true if not set
   );
 
   // Send progress updates to popup

@@ -71,6 +71,26 @@
           <span class="hint">Recommended: 2000ms to be respectful to servers</span>
         </div>
 
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="respectRobotsTxt" checked />
+            <span>Respect robots.txt (Recommended)</span>
+          </label>
+          <p class="robots-explanation">
+            When enabled, Hermes will check each site's robots.txt file before crawling and honor disallow rules. This is the ethical standard for web crawlers.
+            <br><br>
+            <strong>When to disable:</strong>
+          </p>
+          <ul class="robots-list">
+            <li>You own the website you're crawling</li>
+            <li>You have explicit permission from the site owner</li>
+            <li>You're crawling for personal research/accessibility needs</li>
+          </ul>
+          <p class="robots-note">
+            <strong>Note:</strong> Even with this disabled, some sites may block automated access through other means (rate limiting, CAPTCHAs, etc.). You are responsible for how you use this tool.
+          </p>
+        </div>
+
         <button id="saveCrawlSettings" class="primary-btn">Save Crawl Settings</button>
       </section>
 

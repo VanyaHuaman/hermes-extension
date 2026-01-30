@@ -510,6 +510,11 @@ body {
   animation: slideDown 0.3s ease-out;
   font-size: 13px;
   max-width: 90%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 @keyframes slideDown {

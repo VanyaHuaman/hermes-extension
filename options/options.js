@@ -42,6 +42,7 @@ async function loadSettings() {
     const settings = result.settings || {};
     document.getElementById('maxPages').value = settings.maxPagesPerCrawl || 50;
     document.getElementById('crawlDelay').value = settings.crawlDelay || 2000;
+    document.getElementById('respectRobotsTxt').checked = settings.respectRobotsTxt !== false; // Default true
   });
 }
 
@@ -77,6 +78,7 @@ function saveApiKey() {
 function saveCrawlSettings() {
   const maxPages = parseInt(document.getElementById('maxPages').value);
   const crawlDelay = parseInt(document.getElementById('crawlDelay').value);
+  const respectRobotsTxt = document.getElementById('respectRobotsTxt').checked;
 
   if (maxPages < 1 || maxPages > 100) {
     alert('Max pages must be between 1 and 100');
@@ -92,6 +94,7 @@ function saveCrawlSettings() {
     const settings = result.settings || {};
     settings.maxPagesPerCrawl = maxPages;
     settings.crawlDelay = crawlDelay;
+    settings.respectRobotsTxt = respectRobotsTxt;
 
     chrome.storage.local.set({ settings }, () => {
       showStatus('Crawl settings saved!', 'success');

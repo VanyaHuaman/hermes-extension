@@ -15,6 +15,7 @@ A Chrome extension that lets you ask questions about ANY website using AI. Index
 - **Privacy First**: All data stored locally in Chrome
 - **No Server**: Works entirely in your browser
 - **Cookie Support**: Handles authenticated sites automatically
+- **Respects robots.txt**: Automatically checks and honors site crawling preferences
 
 ## 🚀 Quick Start
 
@@ -134,8 +135,12 @@ hermes-extension/
 ### Crawl Settings
 - **Max Pages**: 1-100 pages per crawl (default: 50)
 - **Crawl Delay**: 500-10000ms between pages (default: 2000ms)
+- **Respect robots.txt**: Enabled by default - honors site crawling preferences
+  - Automatically checks robots.txt before crawling
+  - Respects disallow rules and crawl-delay directives
+  - If robots.txt specifies a crawl-delay, always uses that instead of your setting
+  - Can be disabled in settings if you own/have permission for the site
 - **Recommended**: Increase delay to 3-5 seconds for large sites
-- **Check robots.txt**: Many sites have crawling guidelines
 
 ### Storage
 - All data stored in Chrome's local storage
@@ -148,6 +153,7 @@ hermes-extension/
 - **No Tracking**: No analytics, no telemetry
 - **Cookie Isolation**: Uses your browser's cookies, doesn't store them
 - **API Key**: Stored locally, only sent to Anthropic API
+- **Respects robots.txt**: Honors site crawling preferences by default
 - **Open Source**: Full transparency, inspect the code
 
 ## 🛠️ Development
@@ -221,6 +227,12 @@ Edit `popup/popup.html` and `popup/popup.css`
 - Try reducing crawl speed (increase delay)
 - Try "Index This Page" instead
 
+**"Crawling blocked by robots.txt":**
+- Site's robots.txt file disallows automated crawling
+- You can override in Settings (⚙️) → Uncheck "Respect robots.txt"
+- Only override if you own the site or have permission
+- Alternative: Use "Index This Page" for individual pages
+
 **No relevant results:**
 - Index more pages from the site
 - Try different keywords in your question
@@ -231,30 +243,17 @@ Edit `popup/popup.html` and `popup/popup.css`
 - Clearing browser data removes history
 - Use "Export Data" to backup
 
-## 🤝 Contributing
-
-Contributions welcome! This is a prototype/reference implementation.
-
-**Ideas for Improvement:**
-- [ ] Vector embeddings for better search
-- [ ] Automatic re-crawling/updates
-- [ ] Page change detection
-- [ ] Better duplicate detection
-- [ ] Sitemap.xml support
-- [ ] PDF indexing
-- [ ] Image OCR
-- [ ] Multi-language support
-
 ## ⚖️ Legal & Ethics
 
 **Important:** This tool is for personal, educational use only.
 
 ### Responsible Use Guidelines:
-- ✅ **Respect robots.txt** - check if a site allows crawling
+- ✅ **Respect robots.txt** - Hermes checks this automatically by default
 - ✅ **Read Terms of Service** - some sites prohibit automated access
 - ✅ **Use reasonable delays** - default 2s is respectful, increase if needed
 - ✅ **Personal use only** - don't redistribute scraped content
 - ✅ **Respect rate limits** - don't crawl excessively
+- ⚠️ **Don't override robots.txt** - unless you own the site or have permission
 - ⚠️ **Authenticated sites** - be extra careful with login-only content
 - ⚠️ **Private data** - don't crawl sensitive/confidential information
 
