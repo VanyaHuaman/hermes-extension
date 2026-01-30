@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hermes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-top">
+        <h1 class="title">⚡ Hermes</h1>
+        <button id="settingsBtn" class="icon-btn" title="Settings">⚙️</button>
+      </div>
+
+      <div class="stats">
+        <span id="statsText">0 pages indexed</span>
+        <span class="separator">•</span>
+        <button id="domainsBtn" class="text-btn">Domains</button>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="actions">
+        <button id="indexPageBtn" class="action-btn primary">
+          📄 Index This Page
+        </button>
+        <button id="crawlSiteBtn" class="action-btn secondary">
+          🕷️ Crawl Site
+        </button>
+      </div>
+    </div>
+
+    <!-- Domain Selector (shown when multiple domains indexed) -->
+    <div id="domainSelector" class="domain-selector hidden">
+      <label for="domainFilter">Search in:</label>
+      <select id="domainFilter">
+        <option value="">All Domains</option>
+      </select>
+    </div>
+
+    <!-- Domain Management Panel -->
+    <div id="domainsPanel" class="domains-panel hidden">
+      <div class="panel-header">
+        <h3>Indexed Domains</h3>
+        <button id="closePanelBtn" class="close-btn">✕</button>
+      </div>
+      <div id="domainsList" class="domains-list">
+        <!-- Domains will be populated here -->
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div id="messages" class="messages">
+      <div class="welcome">
+        <div class="welcome-icon">⚡</div>
+        <h2>Ask Hermes Anything</h2>
+        <p>Index pages from any website, then ask questions about the content.</p>
+        <div class="quick-start">
+          <h4>Quick Start:</h4>
+          <ol>
+            <li>Click "Index This Page" on any website</li>
+            <li>Or "Crawl Site" to index multiple pages</li>
+            <li>Ask questions about the content!</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div class="input-container">
+      <input
+        type="text"
+        id="questionInput"
+        placeholder="Ask a question about indexed content..."
+        autocomplete="off"
+      />
+      <button id="sendBtn" class="send-btn">Send</button>
+    </div>
+
+    <!-- Status/Loading -->
+    <div id="statusBar" class="status-bar hidden">
+      <div class="status-content">
+        <span id="statusText"></span>
+        <div id="progressBar" class="progress-bar hidden">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
