@@ -163,8 +163,12 @@ hermes-extension/
 
 1. Make changes to any files
 2. Go to `chrome://extensions/`
-3. Click refresh icon on Hermes extension
+3. Click refresh icon (🔄) on Hermes extension
 4. Test changes
+
+**Important:** After first loading the extension, you may need to reload it or restart Chrome for script injection to work properly.
+
+**Note on Claude API:** The extension uses the `anthropic-dangerous-direct-browser-access` header required for browser-based API calls. This is documented in Anthropic's API docs.
 
 ### Adding Features
 
@@ -190,7 +194,7 @@ Edit `popup/popup.html` and `popup/popup.css`
 - **Context**: Top 5 pages sent to Claude
 
 ### API Usage
-- **Cost**: ~$0.01-0.03 per question (Claude Sonnet 4)
+- **Cost**: ~$0.01-0.03 per question (Claude Sonnet 4.5)
 - **Tokens**: Typically 2000-4000 tokens per query
 - **Rate Limits**: Respects Anthropic API limits
 

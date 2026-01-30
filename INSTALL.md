@@ -32,10 +32,9 @@ Quick setup guide to get Hermes running in 5 minutes.
 
 3. Click **"Load unpacked"**
 
-4. Navigate to and select:
-   ```
-   /Users/vanyahuaman/hermes-extension
-   ```
+4. Navigate to and select the **hermes-extension** folder
+   - If you cloned from GitHub: select the cloned `hermes-extension/` directory
+   - Browse to wherever you downloaded/cloned the extension
 
 5. Hermes should now appear in your extensions!
 
@@ -122,6 +121,13 @@ If questions return no results:
 - Make sure pages are indexed (check stats in popup)
 - Try more specific questions
 - View indexed domains (click "Domains" button)
+
+### Extension Not Working After Install
+If the extension loads but features don't work:
+- Go to `chrome://extensions/`
+- Click the **🔄 reload icon** on Hermes extension
+- Sometimes Chrome needs a reload after first install
+- If still having issues, restart Chrome completely
 
 ---
 
