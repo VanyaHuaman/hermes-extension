@@ -134,6 +134,8 @@ hermes-extension/
 ### Crawl Settings
 - **Max Pages**: 1-100 pages per crawl (default: 50)
 - **Crawl Delay**: 500-10000ms between pages (default: 2000ms)
+- **Recommended**: Increase delay to 3-5 seconds for large sites
+- **Check robots.txt**: Many sites have crawling guidelines
 
 ### Storage
 - All data stored in Chrome's local storage
@@ -242,6 +244,21 @@ Contributions welcome! This is a prototype/reference implementation.
 - [ ] PDF indexing
 - [ ] Image OCR
 - [ ] Multi-language support
+
+## ⚖️ Legal & Ethics
+
+**Important:** This tool is for personal, educational use only.
+
+### Responsible Use Guidelines:
+- ✅ **Respect robots.txt** - check if a site allows crawling
+- ✅ **Read Terms of Service** - some sites prohibit automated access
+- ✅ **Use reasonable delays** - default 2s is respectful, increase if needed
+- ✅ **Personal use only** - don't redistribute scraped content
+- ✅ **Respect rate limits** - don't crawl excessively
+- ⚠️ **Authenticated sites** - be extra careful with login-only content
+- ⚠️ **Private data** - don't crawl sensitive/confidential information
+
+**You are responsible for how you use this tool.** The authors are not liable for any misuse or violations of third-party terms of service.
 
 ## 📄 License
 
